@@ -8,10 +8,16 @@
 
 import UIKit
 
-class DraggableView: UIView, Draggable
-{
+protocol DraggableViewDelegate: class {
+    func draggableViewDidSelect(view: DraggableView)
+    func draggableViewDidMove(view: DraggableView)
+}
+
+class DraggableView: UIView, Draggable {
+
     var initialLocation: CGPoint = CGPoint.zero
-    
+    weak var delegate:DraggableViewDelegate?
+
     override func didMoveToSuperview() {
         if self.superview != nil {
             self.registerDraggability()
@@ -20,3 +26,4 @@ class DraggableView: UIView, Draggable
         }
     }
 }
+

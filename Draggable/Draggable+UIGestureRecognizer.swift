@@ -11,27 +11,27 @@ import UIKit
 extension UIGestureRecognizer {
     fileprivate class ClosureWrapper: NSObject {
         let handler: (UIGestureRecognizer) -> Void
-        
+
         init(handler: @escaping (UIGestureRecognizer) -> Void) {
             self.handler = handler
         }
     }
-    
+
     class GestureDelegate: NSObject, UIGestureRecognizerDelegate {
         static var delegateKey: String = "delegateKey"
         @objc func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
             return gestureRecognizer.delegate is GestureDelegate && otherGestureRecognizer.delegate is GestureDelegate
         }
-        
+
         @objc func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
             return true
         }
-        
+
         @objc func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
             return true
         }
     }
-    
+
     fileprivate var multiDelegate: GestureDelegate {
         get {
             return objc_getAssociatedObject(self, &GestureDelegate.delegateKey) as! GestureDelegate
@@ -40,7 +40,7 @@ extension UIGestureRecognizer {
             objc_setAssociatedObject(self, &GestureDelegate.delegateKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
+
     fileprivate static var handlerKey: String = "handlerKey"
     var handler: (UIGestureRecognizer) -> Void {
         get {
@@ -54,7 +54,7 @@ extension UIGestureRecognizer {
             objc_setAssociatedObject(self, &UIGestureRecognizer.handlerKey, ClosureWrapper(handler: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
+
     func handleAction() {
         self.handler(self)
     }
