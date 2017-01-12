@@ -14,7 +14,7 @@ class DraggableCell: UICollectionViewCell, Draggable {
     
     static let identifier: String = "draggablecell"
     
-    var initialLocation: CGPoint = CGPointZero
+    var initialLocation: CGPoint = CGPoint.zero
     
     override func didMoveToSuperview() {
         if self.superview != nil {

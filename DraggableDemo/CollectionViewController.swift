@@ -14,28 +14,28 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSizeMake(self.view.bounds.size.width, 200)
+        layout.itemSize = CGSize(width: self.view.bounds.size.width, height: 200)
         
         self.collectionView?.setCollectionViewLayout(layout, animated: false)
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let draggableCell: DraggableCell = collectionView.dequeueReusableCellWithReuseIdentifier(DraggableCell.identifier, forIndexPath: indexPath) as! DraggableCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let draggableCell: DraggableCell = collectionView.dequeueReusableCell(withReuseIdentifier: DraggableCell.identifier, for: indexPath) as! DraggableCell
         draggableCell.textLabel.text = "Row \(indexPath.row)"
         
         switch indexPath.row % 3 {
         case 0:
-            draggableCell.backgroundColor = UIColor.blueColor()
+            draggableCell.backgroundColor = UIColor.blue
             break
         case 1:
-            draggableCell.backgroundColor = UIColor.purpleColor()
+            draggableCell.backgroundColor = UIColor.purple
             break
         case 2:
-            draggableCell.backgroundColor = UIColor.yellowColor()
+            draggableCell.backgroundColor = UIColor.yellow
             break
         default:
             break

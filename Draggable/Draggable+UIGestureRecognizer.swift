@@ -9,30 +9,30 @@
 import UIKit
 
 extension UIGestureRecognizer {
-    private class ClosureWrapper: NSObject {
+    fileprivate class ClosureWrapper: NSObject {
         let handler: (UIGestureRecognizer) -> Void
         
-        init(handler: (UIGestureRecognizer) -> Void) {
+        init(handler: @escaping (UIGestureRecognizer) -> Void) {
             self.handler = handler
         }
     }
     
     class GestureDelegate: NSObject, UIGestureRecognizerDelegate {
         static var delegateKey: String = "delegateKey"
-        @objc func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        @objc func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
             return gestureRecognizer.delegate is GestureDelegate && otherGestureRecognizer.delegate is GestureDelegate
         }
         
-        @objc func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        @objc func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
             return true
         }
         
-        @objc func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        @objc func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
             return true
         }
     }
     
-    private var multiDelegate: GestureDelegate {
+    fileprivate var multiDelegate: GestureDelegate {
         get {
             return objc_getAssociatedObject(self, &GestureDelegate.delegateKey) as! GestureDelegate
         }
@@ -41,14 +41,14 @@ extension UIGestureRecognizer {
         }
     }
     
-    private static var handlerKey: String = "handlerKey"
+    fileprivate static var handlerKey: String = "handlerKey"
     var handler: (UIGestureRecognizer) -> Void {
         get {
             let closureWrapper: ClosureWrapper = objc_getAssociatedObject(self, &UIGestureRecognizer.handlerKey) as! ClosureWrapper
             return closureWrapper.handler
         }
         set {
-            self.addTarget(self, action: Selector("handleAction"))
+            self.addTarget(self, action: #selector(UIGestureRecognizer.handleAction))
             self.multiDelegate = GestureDelegate()
             self.delegate = self.multiDelegate
             objc_setAssociatedObject(self, &UIGestureRecognizer.handlerKey, ClosureWrapper(handler: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)

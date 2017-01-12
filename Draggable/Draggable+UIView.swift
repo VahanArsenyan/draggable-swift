@@ -39,18 +39,18 @@ extension Draggable where Self: UIView {
             .map({ self.removeGestureRecognizer($0) })
     }
     
-    func didPress(pressGesture: UILongPressGestureRecognizer) {
+    func didPress(_ pressGesture: UILongPressGestureRecognizer) {
         switch pressGesture.state {
-        case UIGestureRecognizerState.Began:
+        case UIGestureRecognizerState.began:
             self.initialLocation = self.view.center
-            UIView.animateWithDuration(0.1, animations: { () -> Void in
-                self.parentView?.bringSubviewToFront(self.view)
-                self.view.transform = CGAffineTransformMakeScale(0.80, 0.80)
+            UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                self.parentView?.bringSubview(toFront: self.view)
+                self.view.transform = CGAffineTransform(scaleX: 0.80, y: 0.80)
             })
             break
-        case UIGestureRecognizerState.Cancelled, UIGestureRecognizerState.Ended, UIGestureRecognizerState.Failed:
-            UIView.animateWithDuration(0.1, animations: { () -> Void in
-                self.view.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        case UIGestureRecognizerState.cancelled, UIGestureRecognizerState.ended, UIGestureRecognizerState.failed:
+            UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             })
             break
         default:
@@ -58,8 +58,8 @@ extension Draggable where Self: UIView {
         }
     }
     
-    func didPan(panGesture: UIPanGestureRecognizer) {
-        let translation = panGesture.translationInView(self.parentView)
-        self.view.center = CGPointMake(self.initialLocation.x + translation.x, self.initialLocation.y + translation.y)
+    func didPan(_ panGesture: UIPanGestureRecognizer) {
+        let translation = panGesture.translation(in: self.parentView)
+        self.view.center = CGPoint(x: self.initialLocation.x + translation.x, y: self.initialLocation.y + translation.y)
     }
 }

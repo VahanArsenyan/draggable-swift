@@ -7,22 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		615E94D31BB840FB00983901 /* DraggableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94D11BB840FB00983901 /* DraggableUITests.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94D41BB840FB00983901 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 615E94D21BB840FB00983901 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		615E94D81BB8410300983901 /* DraggableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94D61BB8410300983901 /* DraggableTests.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94D91BB8410300983901 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 615E94D71BB8410300983901 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		615E94E41BB8412000983901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94DB1BB8412000983901 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94E51BB8412000983901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 615E94DC1BB8412000983901 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		615E94E61BB8412000983901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615E94DD1BB8412000983901 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		615E94E71BB8412000983901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615E94DF1BB8412000983901 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		615E94E81BB8412000983901 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94E11BB8412000983901 /* CollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94E91BB8412000983901 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 615E94E21BB8412000983901 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		615E94EA1BB8412000983901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94E31BB8412000983901 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94F11BB8412600983901 /* Draggable+UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94EC1BB8412600983901 /* Draggable+UIGestureRecognizer.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94F21BB8412600983901 /* Draggable+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94ED1BB8412600983901 /* Draggable+UIView.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94F31BB8412600983901 /* DraggableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94EE1BB8412600983901 /* DraggableCell.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94F41BB8412600983901 /* DraggableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94EF1BB8412600983901 /* DraggableProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		615E94F51BB8412600983901 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94F01BB8412600983901 /* DraggableView.swift */; settings = {ASSET_TAGS = (); }; };
+		615E94D31BB840FB00983901 /* DraggableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94D11BB840FB00983901 /* DraggableUITests.swift */; };
+		615E94D81BB8410300983901 /* DraggableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94D61BB8410300983901 /* DraggableTests.swift */; };
+		615E94E41BB8412000983901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94DB1BB8412000983901 /* AppDelegate.swift */; };
+		615E94E51BB8412000983901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 615E94DC1BB8412000983901 /* Assets.xcassets */; };
+		615E94E61BB8412000983901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615E94DD1BB8412000983901 /* LaunchScreen.storyboard */; };
+		615E94E71BB8412000983901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615E94DF1BB8412000983901 /* Main.storyboard */; };
+		615E94E81BB8412000983901 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94E11BB8412000983901 /* CollectionViewController.swift */; };
+		615E94EA1BB8412000983901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94E31BB8412000983901 /* ViewController.swift */; };
+		615E94F11BB8412600983901 /* Draggable+UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94EC1BB8412600983901 /* Draggable+UIGestureRecognizer.swift */; };
+		615E94F21BB8412600983901 /* Draggable+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94ED1BB8412600983901 /* Draggable+UIView.swift */; };
+		615E94F31BB8412600983901 /* DraggableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94EE1BB8412600983901 /* DraggableCell.swift */; };
+		615E94F41BB8412600983901 /* DraggableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94EF1BB8412600983901 /* DraggableProtocol.swift */; };
+		615E94F51BB8412600983901 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615E94F01BB8412600983901 /* DraggableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,18 +213,21 @@
 		6145773A1BB4D6C500B0A8BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Bay Phillips";
 				TargetAttributes = {
 					614577411BB4D6C500B0A8BA = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 					};
 					614577551BB4D6C500B0A8BA = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 614577411BB4D6C500B0A8BA;
 					};
 					614577601BB4D6C500B0A8BA = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 614577411BB4D6C500B0A8BA;
 					};
 				};
@@ -257,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615E94E91BB8412000983901 /* Info.plist in Resources */,
 				615E94E71BB8412000983901 /* Main.storyboard in Resources */,
 				615E94E51BB8412000983901 /* Assets.xcassets in Resources */,
 				615E94E61BB8412000983901 /* LaunchScreen.storyboard in Resources */,
@@ -268,7 +267,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615E94D91BB8410300983901 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +274,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615E94D41BB840FB00983901 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,8 +359,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -406,8 +405,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -426,6 +427,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -438,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BayPhillips.Draggable;
 				PRODUCT_NAME = DraggableDemo;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -449,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BayPhillips.Draggable;
 				PRODUCT_NAME = DraggableDemo;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -460,6 +464,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BayPhillips.DraggableTestTests;
 				PRODUCT_NAME = DraggableDemo;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DraggableDemo.app/DraggableDemo";
 			};
 			name = Debug;
@@ -472,6 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BayPhillips.DraggableTestTests;
 				PRODUCT_NAME = DraggableDemo;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DraggableDemo.app/DraggableDemo";
 			};
 			name = Release;
@@ -483,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BayPhillips.DraggableDemoUITests;
 				PRODUCT_NAME = DraggableDemo;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = DraggableDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -495,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BayPhillips.DraggableDemoUITests;
 				PRODUCT_NAME = DraggableDemo;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = DraggableDemo;
 				USES_XCTRUNNER = YES;
 			};

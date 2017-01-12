@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        redBox = DraggableView(frame: CGRectMake(150, 150, 250, 250))
-        redBox.backgroundColor = UIColor.redColor()
+        redBox = DraggableView(frame: CGRect(x: 150, y: 150, width: 250, height: 250))
+        redBox.backgroundColor = UIColor.red
         self.view.addSubview(redBox)
     }
 

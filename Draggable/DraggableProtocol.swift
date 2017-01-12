@@ -14,6 +14,6 @@ protocol Draggable: class {
 
     func registerDraggability() -> Void
     func removeDraggability() -> Void
-    func didPress(pressGesture: UILongPressGestureRecognizer) -> Void
-    func didPan(panGesture: UIPanGestureRecognizer) -> Void
+    func didPress(_ pressGesture: UILongPressGestureRecognizer) -> Void
+    func didPan(_ panGesture: UIPanGestureRecognizer) -> Void
 }

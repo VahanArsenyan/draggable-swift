@@ -10,7 +10,7 @@ import UIKit
 
 class DraggableView: UIView, Draggable
 {
-    var initialLocation: CGPoint = CGPointZero
+    var initialLocation: CGPoint = CGPoint.zero
     
     override func didMoveToSuperview() {
         if self.superview != nil {
